@@ -68,7 +68,15 @@ function checkSmallWin(arr, buttonId, winArr, smallTie){
         var text = "O";
         bigBox.innerHTML = text;
     }
-    if(/* condition for tie*/){
+    // Check for a tie 
+    var isTie = true;
+    for (var i=0; i<arr[first].length;i++){
+        if(arr[first][i] !== "X" && arr[first][i] !==  "0"){
+            isTie = false;
+            break;
+        }
+    }
+    if(isTie){
         smallTie = true;
     }
 }
