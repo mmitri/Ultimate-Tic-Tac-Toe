@@ -123,6 +123,7 @@ function endGame(XWin, OWin, largeTie){
     // Disable all buttons
     var allButtons = document.getElementById('container').getElementsByTagName('button');
     for (var i = 0; i < allButtons.length; i++) {
+        allButtons[i].disabled = true;
         allButtons[i].style.pointerEvents = 'none';
     }
     if(XWin){
